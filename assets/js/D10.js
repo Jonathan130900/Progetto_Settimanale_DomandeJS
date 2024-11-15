@@ -231,7 +231,22 @@ console.log('-----------------------------------')
 */
 console.log('ESERCIZIO 8')
 
+function rollTheDices(num) {
+  let result = {
+    sum: 0,
+    values: []
+  };
 
+  for (let i = 0; i < num; i++) {
+    let roll = dice();
+    result.values.push(roll);
+    result.sum += roll;
+  }
+
+  return result;
+}
+
+console.log(rollTheDices(3));
 
 console.log('-----------------------------------')
 
@@ -240,7 +255,15 @@ console.log('-----------------------------------')
 */
 console.log('ESERCIZIO 9')
 
+function howManyDays(passedDate) {
+  const currentDate = new Date();
+  const pastDate = new Date(passedDate);
+  const timeDifference = currentDate - pastDate;
+  const dayDifference = timeDifference / (1000 * 3600 * 24);
+  return Math.floor(dayDifference);
+}
 
+console.log(howManyDays("2024-10-01"));
 
 console.log('-----------------------------------')
 
@@ -249,7 +272,15 @@ console.log('-----------------------------------')
 */
 console.log('ESERCIZIO 10')
 
+function isTodayMyBirthday() {
+  const today = new Date();
+  const birthdayMonth = 8; 
+  const birthdayDay = 13;
 
+  return today.getDate() === birthdayDay && today.getMonth() === birthdayMonth;
+}
+
+console.log(isTodayMyBirthday());
 
 console.log('-----------------------------------')
 
