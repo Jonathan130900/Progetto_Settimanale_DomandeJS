@@ -551,7 +551,6 @@ console.log('-----------------------------------')
   Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
 */
 
-// DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina)
 console.log('ESERCIZIO 19')
 
 function removeIndex(index) {
@@ -563,6 +562,8 @@ function removeIndex(index) {
 console.log(removeIndex(2));
 
 console.log('-----------------------------------')
+
+// DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina)
 
 /* ESERCIZIO 20
   Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina.
@@ -582,7 +583,9 @@ console.log('-----------------------------------')
 */
 console.log('ESERCIZIO 21')
 
-
+function selectTd() {
+  return document.querySelectorAll('td');
+}
 
 console.log('-----------------------------------')
 
