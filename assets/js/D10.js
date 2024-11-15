@@ -491,7 +491,14 @@ console.log('-----------------------------------')
 */
 console.log('ESERCIZIO 15')
 
+function onlyInLastMillennium(movies) {
+  return movies.filter(movie => {
+    const year = parseInt(movie.Year);
+    return year >= 1900 && year <= 2000;
+  });
+}
 
+console.log(onlyInLastMillennium(movies));
 
 console.log('-----------------------------------')
 
@@ -500,7 +507,11 @@ console.log('-----------------------------------')
 */
 console.log('ESERCIZIO 16')
 
+function sumAllTheYears(movies) {
+  return movies.reduce((sum, movie) => sum + parseInt(movie.Year), 0);
+}
 
+console.log(sumAllTheYears(movies));
 
 console.log('-----------------------------------')
 
@@ -509,7 +520,13 @@ console.log('-----------------------------------')
 */
 console.log('ESERCIZIO 17')
 
+function searchByTitle(query) {
+  return movies.filter(movie => 
+    movie.Title.toLowerCase().includes(query.toLowerCase())
+  );
+}
 
+console.log(searchByTitle("The Lord Of The Rings")); 
 
 console.log('-----------------------------------')
 
@@ -519,7 +536,14 @@ console.log('-----------------------------------')
 */
 console.log('ESERCIZIO 18')
 
+function searchAndDivide(query) {
+  const match = movies.filter(movie => movie.Title.toLowerCase().includes(query.toLowerCase()));
+  const unmatch = movies.filter(movie => !movie.Title.toLowerCase().includes(query.toLowerCase()));
+  
+  return { match, unmatch };
+}
 
+console.log(searchAndDivide("Lord"));
 
 console.log('-----------------------------------')
 
@@ -530,7 +554,13 @@ console.log('-----------------------------------')
 // DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina)
 console.log('ESERCIZIO 19')
 
+function removeIndex(index) {
+  const newMovies = [...movies];
+  newMovies.splice(index, 1);
+  return newMovies;
+}
 
+console.log(removeIndex(2));
 
 console.log('-----------------------------------')
 
@@ -539,7 +569,11 @@ console.log('-----------------------------------')
 */
 console.log('ESERCIZIO 20')
 
+function getElementById(id) {
+  return document.getElementById(id);
+}
 
+const container = getElementById('container')
 
 console.log('-----------------------------------')
 
