@@ -98,7 +98,11 @@ console.log('-----------------------------------')
 */
 console.log('ESERCIZIO 1')
 
+function dice() {
+  return Math.floor(Math.random() * 20) + 1;
+}
 
+console.log(dice())
 
 console.log('-----------------------------------')
 
@@ -107,7 +111,18 @@ console.log('-----------------------------------')
 */
 console.log('ESERCIZIO 2')
 
+const num1 = 8;
+const num2 = 18;
 
+function whoIsBigger() {
+  if(num1 > num2) {
+    console.log(num1 + ' è maggiore di ' + num2)
+  } else {
+    console.log(num2 + ' è maggiore di ' + num1)
+  }
+}
+
+whoIsBigger()
 
 console.log('-----------------------------------')
 
@@ -118,7 +133,11 @@ console.log('-----------------------------------')
 */
 console.log('ESERCIZIO 3')
 
+function splitMe(stringa) {
+  return stringa.split(' ')
+}
 
+console.log(splitMe('I love coding'))
 
 console.log('-----------------------------------')
 
@@ -128,7 +147,16 @@ console.log('-----------------------------------')
 */
 console.log('ESERCIZIO 4')
 
+function deleteOne(stringParameter, booleanParameter) {
+  if (booleanParameter) {
+    return stringParameter.slice(1);
+  } else {
+    return stringParameter.slice(0, -1);
+  }
+};
 
+console.log(deleteOne('Io sono true', true));
+console.log(deleteOne('Io sono false', false))
 
 console.log('-----------------------------------')
 
@@ -139,7 +167,13 @@ console.log('-----------------------------------')
 */
 console.log('ESERCIZIO 5')
 
+const dogs = 'I have 4 dogs';
 
+function onlyLetters(dogs) {
+  return dogs.replace(/\d+/g, '');
+};
+
+console.log(onlyLetters(dogs))
 
 console.log('-----------------------------------')
 
@@ -148,7 +182,14 @@ console.log('-----------------------------------')
 */
 console.log('ESERCIZIO 6')
 
+const verifyEmail = 'john.smith@gmail.com'
 
+function isThisAnEmail(verifyEmail) {
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailPattern.test(verifyEmail);
+}
+
+console.log(isThisAnEmail(verifyEmail));
 
 console.log('-----------------------------------')
 
@@ -157,7 +198,22 @@ console.log('-----------------------------------')
 */
 console.log('ESERCIZIO 7')
 
+function whatDayIsIt() {
+  const daysOfWeek = [
+    'Domenica',
+    'Lunedì',
+    'Martedì',
+    'Mercoledì',
+    'Giovedì',
+    'Venerdì',
+    'Sabato'
+  ];
+  const currentDay = new Date();
+  const dayIndex = currentDay.getDay();
+  return daysOfWeek[dayIndex];
+}
 
+console.log(whatDayIsIt())
 
 console.log('-----------------------------------')
 
